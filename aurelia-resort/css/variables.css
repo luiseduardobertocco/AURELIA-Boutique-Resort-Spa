@@ -3,6 +3,7 @@
   --color-ivory-deep: #e8dfd2;
   --color-sand: #d9c6a5;
   --color-charcoal: #1d1b1a;
+  --color-charcoal-soft: #3a3735;
   --color-green: #2f4a3d;
   --color-ocean: #5f7a8a;
   --color-bronze: #a77a4e;
@@ -212,4 +213,8 @@ p {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+[hidden] {
+  display: none !important;
 }

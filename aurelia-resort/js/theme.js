@@ -16,6 +16,12 @@ const themeModule = {
     if (label) {
       label.textContent = theme === 'dark' ? 'Dark' : 'Light';
     }
+
+    if (toggle) {
+      const isDark = theme === 'dark';
+      toggle.setAttribute('aria-pressed', String(isDark));
+      toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    }
   },
 
   init() {

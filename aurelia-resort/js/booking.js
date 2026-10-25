@@ -9,6 +9,13 @@ const bookingModule = {
     const guests = form.querySelector('#guests');
     const room = form.querySelector('#room');
 
+    const today = new Date();
+    const isoDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().split('T')[0];
+    if (checkIn && checkOut) {
+      checkIn.min = isoDate;
+      checkOut.min = isoDate;
+    }
+
     form.addEventListener('submit', (event) => {
       event.preventDefault();
 

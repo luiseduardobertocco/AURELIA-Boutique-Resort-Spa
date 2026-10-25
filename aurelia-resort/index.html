@@ -50,7 +50,7 @@
             </ul>
 
             <div class="nav-actions">
-              <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+              <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode" aria-pressed="false">
                 <span class="theme-toggle__label">Light</span>
               </button>
               <a class="btn btn-primary" href="#booking">Book Now</a>
@@ -97,7 +97,7 @@
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">Stay in harmony</p>
-            <h2>Rooms & Suites</h2>
+            <h2>Rooms &amp; Suites</h2>
           </div>
 
           <div class="filter-bar" aria-label="Room filters">
@@ -233,25 +233,25 @@
             <h2>Gallery</h2>
           </div>
           <div class="gallery-grid" aria-label="Resort gallery">
-            <button class="gallery-item gallery-item--large" type="button" data-title="Resort Pool" data-description="A peaceful and elevated moment by the water." aria-label="Open resort pool image">
+            <button class="gallery-item gallery-item--large" type="button" data-title="Resort Pool" data-description="A peaceful and elevated moment by the water." data-image="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" aria-label="Open resort pool image">
               <span class="gallery-item__caption">Resort</span>
             </button>
-            <button class="gallery-item" type="button" data-title="Ocean Suite" data-description="Soft textures and a panoramic sea view." aria-label="Open ocean suite image">
+            <button class="gallery-item" type="button" data-title="Ocean Suite" data-description="Soft textures and a panoramic sea view." data-image="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=900&q=80" aria-label="Open ocean suite image">
               <span class="gallery-item__caption">Rooms</span>
             </button>
-            <button class="gallery-item" type="button" data-title="Private Beach" data-description="Warm light and tranquil coastline." aria-label="Open private beach image">
+            <button class="gallery-item" type="button" data-title="Private Beach" data-description="Warm light and tranquil coastline." data-image="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=80" aria-label="Open private beach image">
               <span class="gallery-item__caption">Beach</span>
             </button>
-            <button class="gallery-item" type="button" data-title="Infinity Pool" data-description="A polished place to slow down and unwind." aria-label="Open infinity pool image">
+            <button class="gallery-item" type="button" data-title="Infinity Pool" data-description="A polished place to slow down and unwind." data-image="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=900&q=80" aria-label="Open infinity pool image">
               <span class="gallery-item__caption">Pool</span>
             </button>
-            <button class="gallery-item" type="button" data-title="Chef's Table" data-description="Seasonal dining with refined attention to detail." aria-label="Open dining image">
+            <button class="gallery-item" type="button" data-title="Chef's Table" data-description="Seasonal dining with refined attention to detail." data-image="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" aria-label="Open dining image">
               <span class="gallery-item__caption">Dining</span>
             </button>
-            <button class="gallery-item" type="button" data-title="Spa Ritual" data-description="A quiet ritual designed for deep rest." aria-label="Open spa image">
+            <button class="gallery-item" type="button" data-title="Spa Ritual" data-description="A quiet ritual designed for deep rest." data-image="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80" aria-label="Open spa image">
               <span class="gallery-item__caption">Spa</span>
             </button>
-            <button class="gallery-item gallery-item--wide" type="button" data-title="Island Trails" data-description="Curated nature experiences throughout the island." aria-label="Open island trail image">
+            <button class="gallery-item gallery-item--wide" type="button" data-title="Island Trails" data-description="Curated nature experiences throughout the island." data-image="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" aria-label="Open island trail image">
               <span class="gallery-item__caption">Nature</span>
             </button>
           </div>
@@ -317,7 +317,7 @@
             <h2>Request availability</h2>
           </div>
 
-          <form class="booking-form" novalidate>
+          <form class="booking-form" novalidate aria-label="Booking form">
             <div class="form-row">
               <div class="field-group">
                 <label for="checkin">Check-in</label>
@@ -414,8 +414,24 @@
       </div>
 
       <div class="container footer-bottom">
-        <p>© 2026 Aurelia Boutique Resort & Spa. All rights reserved.</p>
+        <p>© 2026 Aurelia Boutique Resort &amp; Spa. All rights reserved.</p>
       </div>
     </footer>
+
+    <div class="lightbox" id="lightbox" hidden>
+      <div class="lightbox__backdrop" data-close="true"></div>
+      <div class="lightbox__panel" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+        <button class="lightbox__close" type="button" aria-label="Close gallery image">×</button>
+        <img id="lightbox-image" src="" alt="" />
+        <div class="lightbox__content">
+          <h3 id="lightbox-title">Image title</h3>
+          <p id="lightbox-description">Image description</p>
+        </div>
+        <div class="lightbox__nav" aria-label="Gallery navigation">
+          <button class="lightbox__nav-btn" type="button" data-direction="prev" aria-label="Previous image">Previous</button>
+          <button class="lightbox__nav-btn" type="button" data-direction="next" aria-label="Next image">Next</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
