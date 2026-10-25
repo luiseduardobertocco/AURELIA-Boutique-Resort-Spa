@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AURELIA — Boutique Resort & Spa</title>
+    <meta name="description" content="AURELIA is a fictional luxury boutique resort and spa concept for a premium frontend portfolio project." />
+    <meta property="og:title" content="AURELIA — Boutique Resort & Spa" />
+    <meta property="og:description" content="Escape to something extraordinary." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" />
+    <meta property="og:image:alt" content="Luxury tropical resort and beach scene" />
+    <meta name="theme-color" content="#f5f1ea" />
+    <link rel="canonical" href="https://example.com/aurelia" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script defer src="js/theme.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/gallery.js"></script>
+    <script defer src="js/booking.js"></script>
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+        <div class="container nav-shell">
+          <a class="brand" href="#top" aria-label="AURELIA home">
+            <span class="brand-mark">A</span>
+            <span class="brand-text">AURELIA</span>
+          </a>
+
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" aria-label="Open navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="nav-panel" id="primary-menu">
+            <ul class="nav-list">
+              <li><a href="#rooms">Rooms</a></li>
+              <li><a href="#experiences">Experiences</a></li>
+              <li><a href="#dining">Dining</a></li>
+              <li><a href="#spa">Spa</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#location">Location</a></li>
+            </ul>
+
+            <div class="nav-actions">
+              <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+                <span class="theme-toggle__label">Light</span>
+              </button>
+              <a class="btn btn-primary" href="#booking">Book Now</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__media" aria-hidden="true"></div>
+        <div class="hero__overlay"></div>
+
+        <div class="container hero__content">
+          <p class="eyebrow">Private island retreat</p>
+          <h1 id="hero-title">AURELIA</h1>
+          <p class="hero__tagline">Escape to something extraordinary.</p>
+          <p class="hero__description">A secluded boutique resort where nature, design and exceptional hospitality meet.</p>
+          <div class="hero__actions">
+            <a class="btn btn-primary" href="#intro">Explore the Resort</a>
+            <a class="btn btn-secondary" href="#booking">Book Your Stay</a>
+          </div>
+        </div>
+
+        <div class="scroll-indicator" aria-label="Scroll to continue">
+          <span></span>
+        </div>
+      </section>
+
+      <section class="section intro" id="intro">
+        <div class="container intro__layout">
+          <div class="intro__content">
+            <p class="eyebrow">A place beyond ordinary</p>
+            <h2>Where quiet luxury unfolds naturally.</h2>
+            <p>Aurelia is a hidden sanctuary shaped by ocean air, warm stone, and thoughtful hospitality.</p>
+            <p>From sunrise swims to candlelit dining and tailored wellness rituals, every detail is crafted to slow time and elevate the senses.</p>
+          </div>
+          <div class="intro__visual" aria-label="AURELIA resort overview"></div>
+        </div>
+      </section>
+
+      <section class="section rooms" id="rooms">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Stay in harmony</p>
+            <h2>Rooms & Suites</h2>
+          </div>
+
+          <div class="filter-bar" aria-label="Room filters">
+            <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" type="button" data-filter="ocean" aria-pressed="false">Ocean</button>
+            <button class="filter-btn" type="button" data-filter="garden" aria-pressed="false">Garden</button>
+            <button class="filter-btn" type="button" data-filter="private-pool" aria-pressed="false">Private Pool</button>
+          </div>
+
+          <div class="rooms-grid" id="rooms-grid">
+            <article class="room-card" data-category="ocean">
+              <div class="card-image card-image--ocean"></div>
+              <div class="card-body">
+                <h3>Ocean Suite</h3>
+                <p>Ocean view · 2 guests · 1 king bed · 85 m²</p>
+                <ul>
+                  <li>Private terrace</li>
+                  <li>Rain shower</li>
+                  <li>Sunrise views</li>
+                </ul>
+                <div class="card-footer">
+                  <strong>From $480/night</strong>
+                  <a href="#booking" class="btn btn-link">View Details</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="room-card" data-category="garden">
+              <div class="card-image card-image--garden"></div>
+              <div class="card-body">
+                <h3>Garden Villa</h3>
+                <p>Private garden · 2 guests · 1 king bed · 110 m²</p>
+                <ul>
+                  <li>Outdoor bathing</li>
+                  <li>Plunge pool</li>
+                  <li>Garden lounge</li>
+                </ul>
+                <div class="card-footer">
+                  <strong>From $620/night</strong>
+                  <a href="#booking" class="btn btn-link">View Details</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="room-card" data-category="private-pool">
+              <div class="card-image card-image--residence"></div>
+              <div class="card-body">
+                <h3>Aurelia Residence</h3>
+                <p>Panoramic view · 4 guests · 2 bedrooms · 180 m²</p>
+                <ul>
+                  <li>Private pool</li>
+                  <li>Chef's kitchen</li>
+                  <li>Concierge services</li>
+                </ul>
+                <div class="card-footer">
+                  <strong>From $1,200/night</strong>
+                  <a href="#booking" class="btn btn-link">View Details</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section experiences" id="experiences">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Moments worth remembering</p>
+            <h2>Experiences</h2>
+          </div>
+          <div class="experience-grid">
+            <article class="experience-card experience-card--ocean">
+              <h3>Ocean</h3>
+              <p>Private beach and crystal-clear waters.</p>
+            </article>
+            <article class="experience-card experience-card--wellness">
+              <h3>Wellness</h3>
+              <p>Yoga, meditation and holistic treatments.</p>
+            </article>
+            <article class="experience-card experience-card--gastronomy">
+              <h3>Gastronomy</h3>
+              <p>Exceptional dining experiences.</p>
+            </article>
+            <article class="experience-card experience-card--nature">
+              <h3>Nature</h3>
+              <p>Trails and curated outdoor experiences.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section spa" id="spa">
+        <div class="container spa__layout">
+          <div class="spa__content">
+            <p class="eyebrow">A sanctuary for the senses</p>
+            <h2>Where restoration meets ritual.</h2>
+            <p>Thoughtful treatments, restorative therapies, and wellness experiences designed to reconnect body and mind.</p>
+            <ul class="feature-list">
+              <li>Massage</li>
+              <li>Wellness treatments</li>
+              <li>Sauna</li>
+              <li>Meditation</li>
+              <li>Private wellness experiences</li>
+            </ul>
+            <a class="btn btn-primary" href="#booking">Discover the Spa</a>
+          </div>
+          <div class="spa__visual" aria-label="Spa and wellness environment"></div>
+        </div>
+      </section>
+
+      <section class="section dining" id="dining">
+        <div class="container dining__layout">
+          <div class="dining__visual" aria-label="Dining experience"></div>
+          <div class="dining__content">
+            <p class="eyebrow">Aurelia Table</p>
+            <h2>Dining shaped by place and season.</h2>
+            <p>Local ingredients, refined techniques, and an intimate chef-led concept bring every meal to life.</p>
+            <ul class="feature-list">
+              <li>Local ingredients</li>
+              <li>Fine dining</li>
+              <li>Chef concept</li>
+              <li>Sunset dining</li>
+            </ul>
+            <a class="btn btn-primary" href="#gallery">Explore Dining</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery" id="gallery">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">A curated view</p>
+            <h2>Gallery</h2>
+          </div>
+          <div class="gallery-grid" aria-label="Resort gallery">
+            <button class="gallery-item gallery-item--large" type="button" data-title="Resort Pool" data-description="A peaceful and elevated moment by the water." aria-label="Open resort pool image">
+              <span class="gallery-item__caption">Resort</span>
+            </button>
+            <button class="gallery-item" type="button" data-title="Ocean Suite" data-description="Soft textures and a panoramic sea view." aria-label="Open ocean suite image">
+              <span class="gallery-item__caption">Rooms</span>
+            </button>
+            <button class="gallery-item" type="button" data-title="Private Beach" data-description="Warm light and tranquil coastline." aria-label="Open private beach image">
+              <span class="gallery-item__caption">Beach</span>
+            </button>
+            <button class="gallery-item" type="button" data-title="Infinity Pool" data-description="A polished place to slow down and unwind." aria-label="Open infinity pool image">
+              <span class="gallery-item__caption">Pool</span>
+            </button>
+            <button class="gallery-item" type="button" data-title="Chef's Table" data-description="Seasonal dining with refined attention to detail." aria-label="Open dining image">
+              <span class="gallery-item__caption">Dining</span>
+            </button>
+            <button class="gallery-item" type="button" data-title="Spa Ritual" data-description="A quiet ritual designed for deep rest." aria-label="Open spa image">
+              <span class="gallery-item__caption">Spa</span>
+            </button>
+            <button class="gallery-item gallery-item--wide" type="button" data-title="Island Trails" data-description="Curated nature experiences throughout the island." aria-label="Open island trail image">
+              <span class="gallery-item__caption">Nature</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section testimonials">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Guest stories</p>
+            <h2>Fictional testimonials</h2>
+          </div>
+          <div class="testimonial-grid">
+            <article class="testimonial-card">
+              <div class="testimonial-rating" aria-label="Five star rating">★★★★★</div>
+              <p>“The kind of place that makes the world feel quieter. Every detail felt considered.”</p>
+              <div class="testimonial-meta">
+                <strong>Amelia Clarke</strong>
+                <span>United Kingdom</span>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-rating" aria-label="Five star rating">★★★★★</div>
+              <p>“The spa ritual, the ocean breeze, and the thoughtful service made the whole stay unforgettable.”</p>
+              <div class="testimonial-meta">
+                <strong>Mateo Costa</strong>
+                <span>Portugal</span>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <div class="testimonial-rating" aria-label="Five star rating">★★★★★</div>
+              <p>“A perfectly balanced retreat: luxurious without ever feeling excessive.”</p>
+              <div class="testimonial-meta">
+                <strong>Sophia Nguyen</strong>
+                <span>Singapore</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section location" id="location">
+        <div class="container location__layout">
+          <div class="location__content">
+            <p class="eyebrow">A private world, far from ordinary.</p>
+            <h2>Aurelia Private Island</h2>
+            <p>South Pacific</p>
+            <ul class="feature-list">
+              <li>Airport transfer available</li>
+              <li>Approx. 40-minute charter flight from the regional hub</li>
+              <li>Scenic arrival by private coastal transfer</li>
+            </ul>
+            <a class="btn btn-primary" href="#booking">How to Get Here</a>
+          </div>
+          <div class="map-placeholder" aria-label="Map placeholder">Map placeholder</div>
+        </div>
+      </section>
+
+      <section class="section booking" id="booking">
+        <div class="container booking__shell">
+          <div class="section-heading">
+            <p class="eyebrow">Plan your escape</p>
+            <h2>Request availability</h2>
+          </div>
+
+          <form class="booking-form" novalidate>
+            <div class="form-row">
+              <div class="field-group">
+                <label for="checkin">Check-in</label>
+                <input id="checkin" name="checkin" type="date" required />
+              </div>
+              <div class="field-group">
+                <label for="checkout">Check-out</label>
+                <input id="checkout" name="checkout" type="date" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field-group">
+                <label for="guests">Guests</label>
+                <select id="guests" name="guests" required>
+                  <option value="">Select</option>
+                  <option value="2">2 Guests</option>
+                  <option value="3">3 Guests</option>
+                  <option value="4">4 Guests</option>
+                  <option value="5">5 Guests</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label for="room">Room</label>
+                <select id="room" name="room" required>
+                  <option value="">Select</option>
+                  <option value="Ocean Suite">Ocean Suite</option>
+                  <option value="Garden Villa">Garden Villa</option>
+                  <option value="Aurelia Residence">Aurelia Residence</option>
+                </select>
+              </div>
+            </div>
+
+            <p class="booking-note">This is a demonstration interface and does not perform real bookings.</p>
+            <button class="btn btn-primary" type="submit">Check Availability</button>
+            <div class="form-message" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </section>
+
+      <section class="section final-cta">
+        <div class="final-cta__overlay"></div>
+        <div class="container final-cta__content">
+          <p class="eyebrow">Begin your retreat</p>
+          <h2>Your escape begins here.</h2>
+          <a class="btn btn-primary" href="#booking">Book Your Stay</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand brand--footer" href="#top" aria-label="AURELIA home">
+            <span class="brand-mark">A</span>
+            <span class="brand-text">AURELIA</span>
+          </a>
+          <p>A private island retreat shaped by nature, thoughtful design, and elevated hospitality.</p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#experiences">Experiences</a></li>
+            <li><a href="#spa">Spa</a></li>
+            <li><a href="#dining">Dining</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <ul class="footer-links">
+            <li><a href="mailto:concierge@aurelia-resort.com">concierge@aurelia-resort.com</a></li>
+            <li><a href="tel:+18005550199">+1 (800) 555-0199</a></li>
+            <li><span>Aurelia Private Island</span></li>
+            <li><span>South Pacific</span></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Newsletter</h3>
+          <form class="newsletter-form" action="#" method="post">
+            <label class="sr-only" for="newsletter-email">Email address</label>
+            <input id="newsletter-email" type="email" placeholder="Email address" />
+            <button class="btn btn-secondary" type="submit">Join</button>
+          </form>
+          <div class="socials" aria-label="Social media links">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Pinterest">Pinterest</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© 2026 Aurelia Boutique Resort & Spa. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

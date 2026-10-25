@@ -1,0 +1,88 @@
+@media (max-width: 991.98px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-panel {
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    right: 1rem;
+    left: 1rem;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem;
+    background: var(--bg-panel);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .nav-panel.is-open {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0.8rem;
+  }
+
+  .nav-actions {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+
+  .rooms-grid,
+  .experience-grid,
+  .testimonial-grid,
+  .footer-grid,
+  .intro__layout,
+  .spa__layout,
+  .dining__layout,
+  .location__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gallery-item--large,
+  .gallery-item--wide {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero__content {
+    padding-top: 5rem;
+  }
+
+  .hero__actions,
+  .newsletter-form,
+  .form-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item--large,
+  .gallery-item--wide {
+    grid-column: span 1;
+  }
+
+  .theme-toggle,
+  .btn {
+    width: 100%;
+  }
+
+  .btn {
+    justify-content: center;
+  }
+}
